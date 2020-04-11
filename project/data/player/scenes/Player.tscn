@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://data/player/assets/spritesheet/roguelikeChar_transparent.png" type="Texture" id=1]
+
+[node name="Player" type="Node2D"]
+
+[node name="SpriteCharacter" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17, 102, 16, 16 )
+__meta__ = {
+"_edit_lock_": true
+}

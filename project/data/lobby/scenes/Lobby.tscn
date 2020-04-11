@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resources/fonts/FontTitle.tres" type="DynamicFont" id=1]
+
+[node name="Lobby" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.0
+margin_top = -60.0
+margin_right = 102.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -52.0
+margin_right = 56.0
+margin_bottom = 46.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][tornado radius=3 freq=5]
+ Nightmare Loop
+[/tornado][/center]"
+text = "
+ Nightmare Loop
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

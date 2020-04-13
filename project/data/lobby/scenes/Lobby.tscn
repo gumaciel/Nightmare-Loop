@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://resources/fonts/FontTitle.tres" type="DynamicFont" id=1]
+[ext_resource path="res://resources/tileset/TileSetMap.tres" type="TileSet" id=2]
+[ext_resource path="res://data/lobby/scripts/LobbyPanel.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/Adler.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/PNG/yellow_button00.png" type="Texture" id=5]
+[ext_resource path="res://assets/PNG/yellow_button01.png" type="Texture" id=7]
+[ext_resource path="res://assets/PNG/yellow_button02.png" type="Texture" id=8]
+[ext_resource path="res://resources/fonts/FontButton.tres" type="DynamicFont" id=9]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 190, 45 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 190, 49 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 4 )
 
 [node name="Lobby" type="Control"]
 anchor_left = 0.5
@@ -16,13 +39,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 1
+format = 1
+tile_data = PoolIntArray( 65547, 0, 0, 131083, 0, 65536 )
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -52.0
-margin_right = 56.0
-margin_bottom = 46.0
-custom_fonts/normal_font = ExtResource( 1 )
+margin_left = -46.5
+margin_top = 17.584
+margin_right = 46.5
+margin_bottom = 49.584
+custom_fonts/normal_font = ExtResource( 9 )
 bbcode_enabled = true
 bbcode_text = "[center][tornado radius=3 freq=5]
  Nightmare Loop
@@ -33,3 +64,76 @@ text = "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.496909
+anchor_top = 0.5
+anchor_right = 0.496909
+anchor_bottom = 0.5
+margin_left = -21.024
+margin_top = 10.5
+margin_right = 21.976
+margin_bottom = 23.5
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color_disabled = Color( 0.388235, 0.305882, 0.113725, 1 )
+custom_colors/font_color = Color( 0.386719, 0.305995, 0.114807, 1 )
+custom_colors/font_color_hover = Color( 0.388235, 0.305882, 0.113725, 1 )
+custom_colors/font_color_pressed = Color( 0.388235, 0.305882, 0.113725, 1 )
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LobbyPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -53.0
+margin_top = -54.0
+margin_right = 53.0
+margin_bottom = -17.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Host" type="Button" parent="LobbyPanel"]
+anchor_bottom = 1.0
+margin_right = 54.0
+margin_bottom = -14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join" type="Button" parent="LobbyPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -52.0
+margin_bottom = -14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status" type="Label" parent="LobbyPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -13.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="LobbyPanel/Host" to="LobbyPanel" method="_on_Host_pressed"]
+[connection signal="pressed" from="LobbyPanel/Join" to="LobbyPanel" method="_on_Join_pressed"]

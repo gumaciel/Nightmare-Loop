@@ -1,4 +1,2 @@
-extends Node
+extends Node2D
 
-
-#signal game_finished

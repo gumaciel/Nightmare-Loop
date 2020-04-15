@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Nightmare Loop"
-run/main_scene="res://data/lobby/scenes/Lobby.tscn"
+run/main_scene="res://data/map/scenes/Map.tscn"
 config/icon="res://icon.png"
 
 [debug]
@@ -31,9 +31,23 @@ window/size/test_width=1020
 window/size/test_height=600
 window/stretch/mode="2d"
 
+[input]
+
+move_front={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+move_back={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/2d/use_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"

@@ -27,14 +27,19 @@ _global_script_class_icons={
 [application]
 
 config/name="Nightmare Loop"
-run/main_scene="res://data/map/scenes/Map.tscn"
+run/main_scene="res://data/lobby/scenes/Lobby.tscn"
 config/icon="res://icon.png"
 config/version="0.1.1"
+
+[autoload]
+
+Game="*res://data/auto_load/game/scenes/Game.tscn"
 
 [display]
 
 window/size/width=204
 window/size/height=120
+window/size/fullscreen=true
 window/size/test_width=1020
 window/size/test_height=600
 window/stretch/mode="2d"
@@ -54,7 +59,6 @@ move_back={
 attack={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":3,"pressed":false,"doubleclick":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
 

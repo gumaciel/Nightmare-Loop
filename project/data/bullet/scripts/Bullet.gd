@@ -4,7 +4,7 @@ onready var TweenNode : Node = $Tween
 
 func _ready() -> void:
 	look_at(get_global_mouse_position())
-	TweenNode.interpolate_property(self, NodePath("position"), position, get_global_mouse_position(), 0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
+	TweenNode.interpolate_property(self, NodePath("position"), position, get_global_mouse_position(), 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
 	TweenNode.start()
 
 	return

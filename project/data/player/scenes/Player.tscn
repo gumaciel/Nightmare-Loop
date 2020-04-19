@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/player/textures/spritesheet/roguelikeChar_transparent.png" type="Texture" id=1]
 [ext_resource path="res://data/player/scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/crosshair/textures/png/crosshair008.png" type="Texture" id=3]
+[ext_resource path="res://resources/fonts/FontButton.tres" type="DynamicFont" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 7 )
@@ -39,4 +40,71 @@ __meta__ = {
 current = true
 limit_left = 0
 limit_top = 0
+limit_right = 320
+limit_bottom = 304
 editor_draw_screen = false
+editor_draw_limits = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -77.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="CanvasLayer/UI/VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 9.0
+custom_fonts/font = ExtResource( 4 )
+text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Label" parent="CanvasLayer/UI/VBoxContainer"]
+margin_top = 13.0
+margin_right = 77.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 4 )
+text = "High Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnPositions" type="Node" parent="."]
+
+[node name="Position2D1" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 69, 149 )
+
+[node name="Position2D2" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 127, 187 )
+
+[node name="Position2D3" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 174, 181 )
+
+[node name="Position2D4" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 32, 28 )
+
+[node name="Position2D5" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 53, 219 )
+
+[node name="Position2D6" type="Position2D" parent="SpawnPositions"]
+modulate = Color( 1, 0, 0.494118, 1 )
+position = Vector2( 153, 223 )

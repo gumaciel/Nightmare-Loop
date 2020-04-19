@@ -2,7 +2,6 @@
 
 [ext_resource path="res://assets/themes/default/fonts/Adler.ttf" type="DynamicFontData" id=1]
 
-
 [resource]
 size = 10
 font_data = ExtResource( 1 )

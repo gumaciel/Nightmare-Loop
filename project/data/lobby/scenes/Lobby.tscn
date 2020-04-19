@@ -1,15 +1,14 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://resources/fonts/FontTitle.tres" type="DynamicFont" id=1]
-[ext_resource path="res://resources/tileset/TileSetMap.tres" type="TileSet" id=2]
+[ext_resource path="res://resources/tileset/TileMapTree.tres" type="TileSet" id=2]
 [ext_resource path="res://data/lobby/scripts/LobbyPanel.gd" type="Script" id=3]
-[ext_resource path="res://assets/fonts/Adler.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://assets/textures/buttons/PNG/blue_button07.png" type="Texture" id=5]
+[ext_resource path="res://assets/themes/default/fonts/Adler.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/buttons/textures/PNG/blue_button07.png" type="Texture" id=5]
 [ext_resource path="res://data/lobby/scripts/Lobby.gd" type="Script" id=6]
-[ext_resource path="res://assets/textures/buttons/PNG/blue_button10.png" type="Texture" id=7]
-[ext_resource path="res://assets/textures/buttons/PNG/blue_button09.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/textures/PNG/blue_button10.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/textures/PNG/blue_button09.png" type="Texture" id=8]
 [ext_resource path="res://resources/fonts/FontButton.tres" type="DynamicFont" id=9]
-
 
 
 [sub_resource type="StyleBoxTexture" id=1]

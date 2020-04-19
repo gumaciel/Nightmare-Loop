@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/click1.ogg-96dea9ad7953431740a3f65375b105a0.oggstr"
+
+[deps]
+
+source_file="res://assets/buttons/textures/Bonus/click1.ogg"
+dest_files=[ "res://.import/click1.ogg-96dea9ad7953431740a3f65375b105a0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

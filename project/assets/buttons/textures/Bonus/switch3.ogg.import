@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/switch3.ogg-48fafc049d571f8e513ce6d1172d9e00.oggstr"
+
+[deps]
+
+source_file="res://assets/buttons/textures/Bonus/switch3.ogg"
+dest_files=[ "res://.import/switch3.ogg-48fafc049d571f8e513ce6d1172d9e00.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

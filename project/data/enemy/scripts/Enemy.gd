@@ -24,7 +24,6 @@ const CHARACTERS := [
 
 func _ready() -> void:
 	$SpriteCharacter.region_rect = CHARACTERS[randi()%(CHARACTERS.size())]
-
 	LifeProgressBar.max_value = life
 	LifeProgressBar.value = life
 	randomize()

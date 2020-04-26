@@ -28,6 +28,7 @@ const CHARACTERS := [
 func _get_camera_position() -> Vector2:
 	return $Camera2D.get_camera_position()
 
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$SpriteCharacter.region_rect = CHARACTERS[randi()%(CHARACTERS.size())]
@@ -36,10 +37,10 @@ func _ready() -> void:
 	randomize()
 	position = ($SpawnPositions.get_child(randi() % $SpawnPositions.get_child_count()) as Position2D).position
 
-	var load_data = Game.load_game(name)
+	var load_data = Game.load_node_by_name(name)
 	if !load_data.empty():
 		set_high_score(load_data.get("high_score"))
-	
+
 func get_input() -> void:
 	look_at(get_global_mouse_position())
 	velocity = Vector2()
@@ -85,7 +86,7 @@ func set_score(value: int) -> void:
 func set_high_score(value : int) -> void:
 	high_score = value
 	$CanvasLayer/UI/VBoxContainer/HighScore.text = "HighScore: " + str(high_score)
-	Game.save_game()
+	Game.save_node_by_path(get_path())
 	return
 	
 func die():
